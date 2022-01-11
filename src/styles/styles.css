@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "MyFont";
+  src: url("./lucida.ttf");
+}
+
+* {
+  font-family: MyFont;
+}
+
+.blog-detail {
+  display: none;
+}
