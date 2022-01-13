@@ -3,11 +3,11 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import { isAuthenticated, signout } from "../../helpers/auth";
+import { signout } from "../../helpers/auth";
 import { notifyLoginSuccess } from "../../helpers/toast";
 
 const Navbar = () => {
-  const authenticated = isAuthenticated();
+  // const authenticated = isAuthenticated();
   const [isauth, setIsauth] = useState(false);
   const router = useHistory();
   useEffect(() => {

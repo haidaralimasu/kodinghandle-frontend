@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Hero, FeatureCard } from "../../components";
+import { Hero, FeatureCard, PostCard } from "../../components";
 
 const Home = () => {
   return (
