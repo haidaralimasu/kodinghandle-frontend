@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getPost } from "../../helpers/core";
 import moment from "moment";
 import parse from "html-react-parser";
+import { Helmet } from "react-helmet";
 
 const Details = ({ slug }) => {
   const [blog, setBlog] = useState({});
@@ -31,6 +32,10 @@ const Details = ({ slug }) => {
 
   return (
     <div>
+      <Helmet>
+        <title>{blog.title}</title>
+      </Helmet>
+
       <div className="bg-white mt-10 shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className=" overflow-hidden shadow-md mb-6">
           <img

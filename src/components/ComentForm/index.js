@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { createComment } from "../../helpers/core";
 import { notifyCommentSuccess, notifyCommentError } from "../../helpers/toast";
-import { useHistory } from "react-router-dom";
 
 const CommentForm = ({ slug }) => {
   const [values, setValues] = useState({
     comment: "",
   });
-  const router = useHistory();
 
   const { comment } = values;
 
@@ -27,8 +25,7 @@ const CommentForm = ({ slug }) => {
             ...values,
             comment: "",
           });
-          notifyCommentSuccess();
-          router.go();
+          notifyCommentError();
           setValues({ comment: "" });
         } else {
           setValues({
